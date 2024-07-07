@@ -1,0 +1,30 @@
+* {
+  margin : 0;
+  padding : 0;
+  box-sizing : border-box;
+  font-family : 'Poppins';
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Root variables */
+
+:root {
+  --padding-inline: 5rem;
+  --container-width: min(60rem, 100%);
+}
+
+/* Utility classes */
+.container {
+  margin: auto;
+  width: var(--container-width);
+}
