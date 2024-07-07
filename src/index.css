@@ -1,14 +1,14 @@
 @font-face {
   font-family: font-extralight;
-  src: url("./fonts/Poppins-ExtraLight.ttf") format('truetype');
+  src: url("/fonts/Poppins-ExtraLight.ttf") format('truetype');
 }
 @font-face {
   font-family: font-thin;
-  src: url("./fonts/Poppins-Thin.ttf") format('truetype');
+  src: url("/fonts/Poppins-Thin.ttf") format('truetype');
 }
 @font-face {
   font-family: font-light;
-  src: url("./fonts/Poppins-Light.ttf") format('truetype');
+  src: url("/fonts/Poppins-Light.ttf") format('truetype');
 }
 @font-face {
   font-family: font-regular;
