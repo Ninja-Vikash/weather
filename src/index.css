@@ -1,8 +1,44 @@
+@font-face {
+  font-family: font-extralight;
+  src: url("./fonts/Poppins-ExtraLight.ttf");
+}
+@font-face {
+  font-family: font-thin;
+  src: url("./fonts/Poppins-Thin.ttf");
+}
+@font-face {
+  font-family: font-light;
+  src: url("./fonts/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: font-regular;
+  src: url("./fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: font-medium;
+  src: url("./fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: font-semibold;
+  src: url("./fonts/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: font-bold;
+  src: url("./fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: font-extrabold;
+  src: url("./fonts/Poppins-ExtraBold.ttf");
+}
+@font-face {
+  font-family: font-black;
+  src: url("./fonts/Poppins-Black.ttf");
+}
+
 * {
   margin : 0;
   padding : 0;
   box-sizing : border-box;
-  font-family : 'Poppins';
 }
 
 html,
@@ -21,6 +57,13 @@ a {
 :root {
   --padding-inline: 5rem;
   --container-width: min(60rem, 100%);
+  --font-light: font-light;
+  --font-normal: font-regular;
+  --font-medium: font-medium;
+  --font-semibold: font-semibold;
+  --font-bold: font-bold;
+  --font-extrabold: font-extrabold;
+  --font-black: font-black;
 }
 
 /* Utility classes */

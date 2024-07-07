@@ -15,7 +15,8 @@
 
     & label {
         font-size: 1.2rem;
-        font-weight: 500;
+        font-family: var(--font-normal);
+        font-weight: 400;
         transition: ease 300ms;
     }
     & label:hover {
@@ -24,6 +25,7 @@
 
     & input {
         flex-grow: 1;
+        font-family: var(--font-normal);
         padding: 0.6rem;
         padding-left: 14px;
         border: 1px solid transparent;
@@ -46,6 +48,7 @@
         backdrop-filter: blur(10px);
         color: white;
         font-size: 1rem;
+        font-family: var(--font-normal);
         cursor: pointer;
         transition: ease 300ms;
     }
@@ -59,6 +62,7 @@
     --radius: 10px;
     --dark-glass: #05000014;
     
+    font-family: var(--font-normal);
     height: 60vh;
     margin-top: 32px;
     padding: 16px 1rem;
@@ -131,6 +135,7 @@
     align-items: start;
 
     & * {
+        font-family: var(--font-light);
         font-weight: 300;
     }
     

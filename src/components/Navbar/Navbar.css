@@ -8,6 +8,7 @@ nav {
 
 nav h2.nav_logo {
     font-size: 1.3rem;
+    font-family: var(--font-medium);
     font-weight: 500;
 }
 
@@ -19,8 +20,9 @@ nav .navigation_area {
 }
 
 nav .navigation_area h3 {
-    font-weight: 400;
     font-size: 1rem;
+    font-family: var(--font-normal);
+    font-weight: 400;
     
     & a {
         color: white;
