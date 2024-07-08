@@ -1,0 +1,19 @@
+.error-component {
+    margin-top: 10%;
+    height: 40vh;
+    font-family: var(--font-light);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    & h1 {
+        font-weight: 300;
+    }
+
+    & :last-child {
+        font-size: 4rem;
+    }
+}
