@@ -10,14 +10,56 @@
     backdrop-filter: blur(5px);
     color: white;
     border-radius: var(--radius);
+    transition: 300ms;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 0.2fr 0.5fr;
-    grid-template-rows: 1fr 0.5fr 1fr;
+    --col: 1fr 1fr 0.2fr 0.5fr;
+    --row: 1fr 0.5fr 1fr;
+    grid-template-columns: var(--col);
+    grid-template-rows: var(--row);
 
     grid-template-areas: "temp temp temp weather_type"
-                        "city_name city_name more more"
-                        "now now more more";
+                         "city_name city_name more more"
+                         "now now more more";
+}
+
+@media (max-width: 900px) {
+    .weather_data {
+        --col: 1fr 0.8fr 0.4fr 0.5fr; 
+    }
+}
+@media (max-width: 750px) {
+    .weather_data {
+        --col: 1fr 0.8fr 0.4fr 0.8fr; 
+    }
+}
+@media (max-width: 680px) {
+    .weather_data {
+        --col: 1.2fr 0.5fr 1fr 2fr;
+        --row: 0.3fr 1fr 1fr 2fr;
+
+        grid-template-areas: "city_name city_name city_name city_name"
+                             "temp temp temp temp"
+                             "now now now now"
+                             "weather_type _ _ more";
+    }
+}
+@media (max-width: 630px) {
+    .weather_data {
+        --col: 1.5fr 0.5fr 0.5fr 2fr;
+        --row: 0.3fr 1fr 1fr 2fr;
+    }
+}
+@media (max-width: 570px) {
+    .weather_data {
+        --col: 1.5fr 0.5fr 0.5fr 2fr;
+        --row: 0.3fr 1fr 1fr 2fr;
+
+        grid-template-areas: "city_name city_name city_name city_name"
+                             "temp temp temp temp"
+                             "now now now now"
+                             "weather_type weather_type more more";
+    }
 }
 
 .temp {
@@ -25,13 +67,25 @@
     /* background: olivedrab; */
     font-size: 4.5rem;
     line-height: 3.5rem;
+    transition: 300ms;
 
     display: flex;
     align-items: end;
 }
+
+@media (max-width: 680px){
+    .temp{
+        font-size: 4rem;
+
+        align-items: center
+    };
+}
+
 .weather_type {
     grid-area: weather_type;
+    /* background-color: red; */
     height: 100%;
+    transition: 300ms;
     
     display: flex;
     flex-direction: column;
@@ -66,9 +120,17 @@
         font-size: 0.9rem;
     }
 }
+
+@media (max-width: 570px) {
+    .weather_type {
+        padding-right: 15px;
+    }
+}
+
 .now {
     grid-area: now;
     /* background: lightskyblue; */
+    transition: 300ms;
     
     display: flex;
     flex-direction: column;
@@ -92,18 +154,44 @@
         }
     }
 }
+
+@media (max-width: 680px) {
+    .now {
+        & >h3 {
+            font-size: 1.5rem;
+        }
+
+        & div {
+            & h3 {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
 .city_name {
     grid-area: city_name;
     /* background: chartreuse; */
     font-size: 3rem;
+    transition: 300ms;
 
     display: flex;
     align-items: end;
 }
+
+@media (max-width: 680px)  {
+    .city_name {
+        font-size: 2rem;
+
+        align-items: center;
+    }
+}
+
 .more {
     grid-area: more;
     /* background: teal; */
     padding-top: 15px;
+    transition: 300ms;
 
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -134,5 +222,11 @@
         & p:last-child{
             font-size: 1.5rem;
         }
+    }
+}
+
+@media (max-width: 680px){
+    .more {
+        padding-top: 0;
     }
 }

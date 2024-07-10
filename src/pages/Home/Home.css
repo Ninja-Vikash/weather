@@ -1,5 +1,12 @@
 .home_page {
     padding: 0 var(--padding-inline);
+    transition: 300ms;
+}
+
+@media (max-width: 520px){
+    .home_page {
+        padding: 0 24px;
+    }
 }
 
 .home_page .search_area {

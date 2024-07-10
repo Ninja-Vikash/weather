@@ -11,6 +11,7 @@ footer {
     height: 70px;
     position: absolute;
     bottom: 0;
+    transition: 300ms;
     
     & .content {
         height: 100%;
@@ -29,5 +30,18 @@ footer {
             color: #fff;
         }
 
+    }
+}
+
+@media (max-width: 520px) {
+    footer {
+        & .content {
+            padding: 0 24px;
+
+            & p {
+                font-size: 0.75rem;
+                padding: 8px 20px;
+            }
+        }
     }
 }

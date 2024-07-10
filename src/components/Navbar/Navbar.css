@@ -1,9 +1,16 @@
 nav {
     padding: 2rem var(--padding-inline);
     color: white;
+    transition: 300ms;
 
     display: grid;
     grid-template-columns: 15vw 1fr;
+}
+
+@media (max-width: 520px) {
+    nav {
+        padding: 1.5rem 24px;
+    }
 }
 
 nav h2.nav_logo {
