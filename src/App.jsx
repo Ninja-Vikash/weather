@@ -6,28 +6,34 @@ import Navbar from "./components/Navbar/Navbar";
 import { useEffect, useState } from "react";
 import { preloadImages } from "./utils/preloadImage";
 
-
-
 function App() {
   // Background images state
-  const [background, setBackground] = useState("1")
+  const [background, setBackground] = useState("/img/1.avif")
 
   useEffect(() => {
     // Preload images
     const imageUrls = Array.from({ length: 9 }, (_, i) => `/img/${i + 1}.avif`);
     preloadImages(imageUrls);
-    console.log(imageUrls)
+    // console.log(imageUrls)
   }, []);
 
   // Function for setting a random background image
-  const theme = (data)=> {
-    let bgImage = Math.ceil(Math.random() * 9)
-    console.log(bgImage)
-    setBackground(`${bgImage}`)
-  }
+  const theme = () => {
+    const bgImageIndex = Math.ceil(Math.random() * 9);
+    const bgImageUrl = `/img/${bgImageIndex}.avif`;
+
+    // Create a new Image object to preload the new background image
+    const img = new Image();
+    img.src = bgImageUrl;
+    img.onload = () => {
+      // Once the image is loaded, set the background state
+      setBackground(bgImageUrl);
+      // console.log(bgImageUrl)
+    };
+  };
 
   const style = {
-    backgroundImage: `url("/img/${background}.avif")`
+    backgroundImage: `url(${background})`
   }
 
   return (
